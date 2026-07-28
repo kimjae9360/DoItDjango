@@ -25,8 +25,9 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary container">
-      <div class="container-fluid">
+    <!-- nav 마지막에 container를 넣어서 중앙 정렬을 진행함-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid container">
         <a class="navbar-brand" href="./index.html">Do It Django</a>
         <button
           class="navbar-toggler"
@@ -81,15 +82,33 @@
       <a href="./about_me.html">About me</a>
     </nav> -->
     <div class="container">
-      <h1>About me</h1>
-      <h2>경기도 사람 김재원입니다.</h2>
-      <p>HTML, CSS, JS, Django로 재미있는 웹사이트 만드는 것을 좋아합니다.</p>
+      <div class="row">
+        <!-- 메인 row 시작-->
+        <div class="col-9">
+          <h1>About me</h1>
+          <h2>경기도 사람 김재원입니다.</h2>
+          <p>
+            HTML, CSS, JS, Django로 재미있는 웹사이트 만드는 것을 좋아합니다.
+          </p>
 
-      <button onclick="whatTimeIsIt()">현재시간</button>
+          <button onclick="whatTimeIsIt()">현재시간</button>
+          <hr />
+          <!-- 구분선 추가-->
 
-      <a href="index.html">첫 화면으로 가기</a>
-      <img src="./images/beauty.JPEG" height="300px" />
+          <a href="index.html">첫 화면으로 가기</a>
+
+          <div class="row">
+            <div class="col-sm bg-info">One of three columns</div>
+            <div class="col-sm bg-secondary">One of three columns</div>
+            <div class="col-sm bg-warning">One of three columns</div>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="./images/beauty.JPEG" class="img-fluid w-100" />
+        </div>
+      </div>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
